@@ -19,6 +19,7 @@ class CreateMessageDetailsTable extends Migration
             $table->string('message',500);
             $table->unsignedInteger('mobile_number');
             $table->unsignedInteger('template_id');
+            $table->boolean('is_send');
             $table->foreign('template_id')->references('id')->on('sms_template');
             $table->timestamps();
         });
